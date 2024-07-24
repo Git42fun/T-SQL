@@ -1,4 +1,6 @@
-SET NOCOUNT ON
+USE [payroll_sys];
+
+SET NOCOUNT ON;
 
 INSERT INTO attendance (id, check_in, check_out) VALUES (1, '2024-01-01 10:10:03.000', '2024-01-01 19:10:37.000');
 INSERT INTO attendance (id, check_in, check_out) VALUES (1, '2024-01-02 10:26:07.000', '2024-01-02 16:20:07.000');

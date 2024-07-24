@@ -1,4 +1,7 @@
-SET NOCOUNT ON
+USE [payroll_sys];
+
+SET NOCOUNT ON;
+
 -- Employee_details Table
 INSERT INTO [Employee_details] VALUES 
 	(1, 'Janos', 'Chessun', 'Male','1991-08-11', 'MARRIED', 'United States', 'Houston', '77299', '713-908-0107', 'jchessun0@vistaprint.com',2,'2023-08-31', 'WIMRU6816T',88826.82),
@@ -102,7 +105,7 @@ INSERT INTO [Employee_details] VALUES
 	(99, 'Ches', 'Patnelli', 'Male','1992-05-19', 'MARRIED', 'United States', 'Phoenix', '85099', '602-663-8152', 'cpatnelli2q@chron.com',3,'2024-03-07', 'KNVVX8363A',137476.2),
 	(100, 'Anatollo', 'MacSorley', 'Male','2002-04-17', 'MARRIED', 'United States', 'Fort Lauderdale', '33330', '954-855-7626', 'amacsorley2r@facebook.com',3,'2022-04-09', 'ERFWT8854F',123281.26);
 
-PRINT 'emp_details completed'
+PRINT 'INSERTION INTO emp_details completed';
 
 -- Department Table
 INSERT INTO [department] VALUES 
@@ -116,7 +119,7 @@ INSERT INTO [department] VALUES
 	(8, 'Support'),
 	(9, 'Testing');
 
-PRINT 'dept completed'
+PRINT 'INSERTION INTO dept completed';
 
 -- Lead Table 
 INSERT INTO [lead] VALUES 
@@ -128,7 +131,7 @@ INSERT INTO [lead] VALUES
 	(6, 'Senior Manager'),
 	(7, 'Senior Executive');
 
-PRINT 'lead completed'
+PRINT 'INSERTION INTO lead completed';
 
 -- Emp_master Table
 INSERT INTO [Emp_master] VALUES (1,6,5),
@@ -232,7 +235,7 @@ INSERT INTO [Emp_master] VALUES (1,6,5),
 	(99,3,2),
 	(100,7,6);
 
-PRINT 'emp_master completed'
+PRINT 'INSERTION INTO emp_master completed';
 
 
 -- Leave Table
@@ -257,7 +260,7 @@ INSERT INTO leave(id, date) VALUES (3, '2024-01-24');
 INSERT INTO leave(id, date) VALUES (3, '2024-01-25');
 INSERT INTO leave(id, date) VALUES (3, '2024-01-26');
 
-PRINT 'leave completed'
+PRINT 'INSERTION INTO leave completed';
 
 
 
@@ -269,7 +272,7 @@ INSERT INTO [allowance] VALUES (1, 'House Rent Allowance', 'House Rent Allowance
 	(5, 'Other Allowances', 'Other Allowance refers to list of allowances that’s not mentioned above',10000),
 	(6, 'Bonus', 'Bonus is generally a multiplier of your basic pay that’s usually awarded during festive',80000);
 
-PRINT 'Allowance Completed'
+PRINT 'INSERTION INTO Allowance Completed'
 
 -- Deduction Table
 INSERT INTO [deductions] VALUES (1, 'Provident Fund', 'A Provident Fund (PF) is a savings and retirement fund that is deducted from employees salary and disbursed to him during retirement',15000),
@@ -278,7 +281,7 @@ INSERT INTO [deductions] VALUES (1, 'Provident Fund', 'A Provident Fund (PF) is 
 	(4, 'Relocation Allowance', 'Relocation Allowance(RL) is given to support the employee on relocation different site of the organization',50000),
 	(5, 'Other Deductions', 'Other deductions',10000);
 
-PRINT 'deduction completed'
+PRINT 'INSERTION INTO deduction completed'
 
 --Employee-Allowance Table
 INSERT INTO [emp_allowance] VALUES 
@@ -583,7 +586,7 @@ INSERT INTO [emp_allowance] VALUES
 	(99,5),
 	(100,6);
 
-PRINT 'emp_allowance completed'
+PRINT 'INSERTION INTO emp_allowance completed'
 
 -- Emp_deductions TABLE
 INSERT INTO [emp_deductions] VALUES 
@@ -788,5 +791,5 @@ INSERT INTO [emp_deductions] VALUES
 	(99,2),
 	(100,3);
 
-	PRINT 'emp_deductions completed'
+	PRINT 'INSERTION INTO emp_deductions completed'
 

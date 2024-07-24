@@ -43,6 +43,7 @@ CREATE VIEW [full_info] AS
 	JOIN [lead] l ON l.[id] = em.[Lead_id]
 )
 
+-- attendance with permission provides a view on JAN, FEB, MAR data of each employee with number of absent days including 2 permissions awarded to them
 CREATE VIEW [attendance_with_permission] AS 
 (
 SELECT [id],
@@ -52,9 +53,10 @@ CASE	WHEN SUM(CASE	WHEN DATEDIFF(second, CAST([check_in] AS time), CAST([check_o
 END AS [absent]
 FROM [attendance]
 GROUP BY [id], LEFT(DATENAME(month, CAST([check_in] AS DATE)), 3) + RIGHT(DATENAME(year, CAST([check_in] AS DATE)), 2)
-
 )
 
+
+-- leave without permission provides a view on JAN, FEB, MAR data of each employee who has applied for leave with number of days absent per month, excluding allowed permission of 1 day per month
 CREATE VIEW [leave_without_permission] AS
 (
 SELECT [id],
@@ -65,6 +67,7 @@ GROUP BY [id], LEFT(DATENAME(month, CAST([date] AS DATE)), 3) + RIGHT(DATENAME(y
 
 )
 
+-- att_leave helps provide information on total days an employee has been absent, considering data present on employee attendance and leave table, with 3 permissions deducted(2 based on attendance, 1 based on leave)
 CREATE VIEW [att_leave] AS
 (
 SELECT awp.[id], awp.[Monthyr], awp.[absent] +
